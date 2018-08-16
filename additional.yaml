@@ -3,12 +3,12 @@ config_version: 3
 http:
     rules:
         -
-            selector: AddClassTemplateInProgram
-            post: "/api/v1/classes/template/program"
+            selector: AddUpdateClass
+            post: "/api/v1/classes"
             body: "*"
             additional_bindings:
                 -
-                    selector: AddUpdateClassTemplateInProgram
-                    patch: "/api/v1/classes/template/{id}/program"
+                    selector: AddUpdateClass
+                    put: "/api/v1/classes/{id}"
                     body: "*"
         
