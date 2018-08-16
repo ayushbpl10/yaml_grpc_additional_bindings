@@ -1,0 +1,14 @@
+type: class
+config_version: 3
+http:
+    rules:
+        -
+            selector: AddClassTemplateInProgram
+            post: "/api/v1/classes/template/program"
+            body: "*"
+            additional_bindings:
+                -
+                    selector: AddUpdateClassTemplateInProgram
+                    patch: "/api/v1/classes/template/{id}/program"
+                    body: "*"
+        
